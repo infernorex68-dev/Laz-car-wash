@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Laz Gentle Touch Universe</title>
+<meta name="description" content="Laz Gentle Touch Carwash, Chloorkop. A hand car wash rated 5.0, told as a journey through a particle universe. Book in chat.">
+<meta name="theme-color" content="#F4F5F7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<canvas id="trail" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<div id="boot" aria-hidden="true"><div class="bootIn"><b>LGT</b><span id="bootLine">Calibrating foam cannons</span><div class="bootBar"><i id="bootBar"></i></div><span id="bootPct">000%</span></div></div>
+
+<header class="bar">
+  <a class="brand" href="#arrival" data-cursor="Top"><span class="glyph" aria-hidden="true"></span><span>LGT<span class="full"> · Laz Gentle Touch</span></span></a>
+  <nav aria-label="Sections">
+    <a href="#services">Services</a><a href="#packages">Packages</a><a href="#bay">Bay</a><a href="#signal">Reviews</a><a href="#coordinates">Find us</a>
+  </nav>
+  <button class="btn prime sm magnet" type="button" data-chat data-cursor="Book">Book a wash</button>
+</header>
+
+<div class="hud" aria-hidden="true">
+  <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+  <div class="readL"><span class="sector">Sector <b id="secNum">01</b> / 08 · <b id="secName">Arrival</b></span><span>26.0444° S · 28.1571° E · Chloorkop</span></div>
+  <div class="readR"><span>Drift <b id="vel">0.00</b></span><span class="warp">Hold anywhere to warp</span></div>
+</div>
+<nav class="orbit" aria-label="Jump to sector">
+  <a href="#arrival"><span>Arrival</span><i></i></a><a href="#protocol"><span>Protocol</span><i></i></a><a href="#services"><span>Services</span><i></i></a><a href="#packages"><span>Packages</span><i></i></a><a href="#bay"><span>The bay</span><i></i></a><a href="#signal"><span>Reviews</span><i></i></a><a href="#coordinates"><span>Find us</span><i></i></a><a href="#book"><span>Book</span><i></i></a>
+</nav>
+<div class="cur" aria-hidden="true"><i class="dot"></i><i class="ring"><span></span></i></div>
+
+<main>
+  <section class="sec" id="arrival" data-side="1" data-name="Arrival">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Hand car wash · Chloorkop, Gauteng</p>
+      <h1 class="mega" aria-label="Laz Gentle Touch"><span data-scramble>Laz</span><span class="o" data-scramble>Gentle</span><span class="g" data-scramble>Touch</span></h1>
+      <p class="lede">Every car is foamed, washed by hand and finished under cover. Rated 5.0 by 47 customers. Scroll to fly through the bay.</p>
+      <div class="ctaRow"><button class="btn prime magnet" type="button" data-chat data-cursor="Book">Book in chat <span class="arr">→</span></button><a class="btn ghost magnet" href="#protocol" data-cursor="Fly">Enter the bay</a></div>
+      <div class="tags"><span class="tag" data-depth=".5"><b>★ 5.0</b> · 47 ratings</span><span class="tag live" data-depth=".9"><b>●</b> Walk-ins welcome</span><span class="tag" data-depth="1.3">Covered bay</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="protocol" data-side="1" data-name="Protocol">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Sector 02 · The wash protocol</p>
+      <h2 data-scramble>Foam first. <em>Hands</em> always.</h2>
+      <p class="lede">Every wash runs the same four stages, in the same order, by hand. The particles behind this card are your car going through them.</p>
+      <ol class="steps">
+        <li class="holo step" data-depth=".25" data-tilt><span class="n">01</span><h3 class="z1">Foam</h3><p>Thick foam lifts dust and grime before anyone touches the paint.</p></li>
+        <li class="holo step" data-depth=".45" data-tilt><span class="n">02</span><h3 class="z1">Hand wash</h3><p>Soft mitts, panel by panel. That's the gentle touch.</p></li>
+        <li class="holo step" data-depth=".65" data-tilt><span class="n">03</span><h3 class="z1">Rinse</h3><p>A pressure rinse carries the dirt away, top to bottom.</p></li>
+        <li class="holo step" data-depth=".85" data-tilt><span class="n">04</span><h3 class="z1">Dry &amp; shine</h3><p>Hand-dried, windows wiped, tyres finished.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="services" data-side="-1" data-name="Services">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Sector 03 · Services</p>
+      <h2 data-scramble>Seven <em>services</em>, one bay.</h2>
+      <p class="lede">From a quick wash to scratch removal, everything is done by hand at the bay in Chloorkop. Each glowing node behind this card is one service.</p>
+      <div class="svcs">
+        <article class="holo svc wide" data-depth="0.25" data-tilt><span class="sn">01</span><h3 class="z1">Car wash</h3><p>Foam, hand wash, rinse and dry, inside a covered bay.</p></article>
+        <article class="holo svc" data-depth="0.33" data-tilt><span class="sn">02</span><h3 class="z1">Auto detailing</h3><p>A deep clean, inside and out, down to the small details.</p></article>
+        <article class="holo svc" data-depth="0.41" data-tilt><span class="sn">03</span><h3 class="z1">Car waxing</h3><p>A hand-applied wax layer for shine and protection.</p></article>
+        <article class="holo svc" data-depth="0.49" data-tilt><span class="sn">04</span><h3 class="z1">Polishing</h3><p>Brings back gloss on dull or faded paint.</p></article>
+        <article class="holo svc" data-depth="0.57" data-tilt><span class="sn">05</span><h3 class="z1">Scratch removal</h3><p>Light scratches and swirl marks treated by hand.</p></article>
+        <article class="holo svc" data-depth="0.65" data-tilt><span class="sn">06</span><h3 class="z1">Vacuuming</h3><p>Seats, carpets and mats vacuumed.</p></article>
+        <article class="holo svc" data-depth="0.73" data-tilt><span class="sn">07</span><h3 class="z1">Interior vacuuming</h3><p>A full vehicle interior vacuum, boot included.</p></article>
+      </div>
+      <button class="btn prime sm magnet" type="button" data-chat data-cursor="Book" style="align-self:flex-start">Book a service <span class="arr">→</span></button>
+    </div>
+  </section>
+
+  <section class="sec" id="packages" data-side="1" data-name="Packages">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Sector 04 · Packages</p>
+      <h2 data-scramble>Pick your <em>orbit</em>.</h2>
+      <p class="lede">Four packages, four rings. Hover a card to light up its ring.</p>
+      <div class="pk">
+        <article class="holo pkc" data-ring="0" data-depth=".3" data-tilt style="--c:var(--plasma)"><div class="top">Ring 1<i></i></div><h3 class="z1">Quick wash</h3><p>Foam, hand wash, rinse and dry.</p><div class="bot z1"><span class="price"><span class="ph">R[__]</span></span><button class="go" type="button" data-chat data-cursor="Book">Book</button></div></article>
+        <article class="holo pkc feat" data-ring="1" data-depth=".6" data-tilt style="--c:var(--ion)"><div class="top">Ring 2 · Popular<i></i></div><h3 class="z1">Wash &amp; vac</h3><p>Quick wash plus vacuum, mats and windows.</p><div class="bot z1"><span class="price"><span class="ph">R[__]</span></span><button class="go" type="button" data-chat data-cursor="Book">Book</button></div></article>
+        <article class="holo pkc" data-ring="2" data-depth=".45" data-tilt style="--c:var(--flare)"><div class="top">Ring 3<i></i></div><h3 class="z1">Full valet</h3><p>Inside and out: dash, seats, tyres dressed, rims scrubbed.</p><div class="bot z1"><span class="price"><span class="ph">R[__]</span></span><button class="go" type="button" data-chat data-cursor="Book">Book</button></div></article>
+        <article class="holo pkc" data-ring="3" data-depth=".75" data-tilt style="--c:#E6EEFF"><div class="top">Ring 4 · Add-on<i></i></div><h3 class="z1">Wax &amp; polish</h3><p>Hand wax for shine and protection. Add it to any wash.</p><div class="bot z1"><span class="price"><span class="ph">R[__]</span></span><button class="go" type="button" data-chat data-cursor="Book">Book</button></div></article>
+      </div>
+      <p class="note">Prices for sedans and hatchbacks. SUVs, bakkies and minibuses from <span class="ph">R[__]</span> extra.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="bay" data-side="-1" data-name="The bay">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Sector 05 · The bay</p>
+      <h2 data-scramble>Real bay. <em>Real</em> team.</h2>
+      <p class="lede">The hologram behind this card is built, particle by particle, from a photo of the wash bay in Chloorkop.</p>
+      <div class="holo bayCard" data-depth=".4" data-tilt>
+        <figure class="scan" style="margin:0"><img id="bayPhoto" src="images/wash-bay.webp" alt="The covered wash bay: a dark hatchback covered in foam while the team works around it"><figcaption>Bay 01 · live feed</figcaption></figure>
+        <div class="feats"><span class="tag">Covered bay</span><span class="tag">Hand wash</span><span class="tag">Pressure rinse</span><span class="tag">Paved bay</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="signal" data-side="1" data-name="Reviews">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Sector 06 · Signal from customers</p>
+      <div class="score"><b>5.0</b><div><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><span>47 ratings on magicpin</span></div></div>
+      <div class="revs">
+        <figure class="holo rev" data-depth=".3" data-tilt><blockquote class="z1">“Took my car there earlier, extreme pleased with the service I received, great stuff, would highly recommend”</blockquote><figcaption><span class="st">★★★★★</span>Thapelo · magicpin</figcaption></figure>
+        <figure class="holo rev" data-depth=".7" data-tilt><blockquote class="z1">“Amazing service. My car was spotless.”</blockquote><figcaption><span class="st">★★★★★</span>Molemo · magicpin</figcaption></figure>
+        <figure class="holo rev" data-depth=".5" data-tilt><blockquote class="z1">“Thank you for the wonderful service. I am definitely coming back.”</blockquote><figcaption><span class="st">★★★★★</span>Solomzi · magicpin</figcaption></figure>
+      </div>
+      <a class="btn ghost sm magnet" href="https://magicpin.com/south-africa/Chloorkop/Chloorkop/Autocare/Laz-Gentle-Touch-Carwash/store/28a847c/reviews" target="_blank" rel="noopener" data-cursor="Open" style="align-self:flex-start">Read all reviews <span class="arr">↗</span></a>
+    </div>
+  </section>
+
+  <section class="sec" id="coordinates" data-side="-1" data-name="Find us">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Sector 07 · Coordinates</p>
+      <h2 data-scramble>Set course for <em>Chloorkop</em>.</h2>
+      <dl class="holo coord" data-depth=".35" data-tilt>
+        <div class="row"><dt>Address</dt><dd>288 Nancy Ndamase St, Klipfontein View, Lethabong, 1685 (Chloorkop)<br><a href="https://www.google.com/maps/search/?api=1&amp;query=288+Nancy+Ndamase+St,+Klipfontein+View,+Lethabong,+1685" target="_blank" rel="noopener" data-cursor="Map">Open in Google Maps ↗</a></dd></div>
+        <div class="row"><dt>Call / WhatsApp</dt><dd><span id="phoneNum">078 832 6806</span><button class="copy" type="button" id="copyPhone" data-cursor="Copy">Copy</button></dd></div>
+        <div class="row"><dt>Hours</dt><dd><div class="hrs"><span>Mon–Sat</span><b class="ph">07:30–18:00</b><span>Sunday</span><b class="ph">08:00–15:00</b></div></dd></div>
+        <div class="row"><dt>Arrival</dt><dd>Look for the covered wash bay. Walk-ins welcome, or book ahead in chat.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="book" data-side="0" data-name="Book">
+    <div class="content">
+      <p class="eyebrow"><span class="ln"></span>Sector 08 · Docking</p>
+      <h2 data-scramble>Talk to <em>Bubbles</em>.</h2>
+      <p class="lede">Our booking assistant asks for your car, package, day and time, then sends the booking to the team on WhatsApp.</p>
+      <div class="holo term" data-depth=".4" data-tilt>
+        <span class="bub">Hi! I'm Bubbles. What's your name?</span>
+        <span class="bub me">Thabo</span>
+        <span class="bub">Nice to meet you, Thabo! What are we washing?</span>
+      </div>
+      <div class="flow" aria-label="Booking steps"><i>Car</i><i>Package</i><i>Day</i><i>Time</i><i>Phone</i><i>Confirm on WhatsApp</i></div>
+      <button class="btn prime magnet" type="button" data-chat data-cursor="Chat">Start booking <span class="arr">→</span></button>
+    </div>
+  </section>
+</main>
+<footer><span>© 2026 Laz Gentle Touch Carwash</span><span>288 Nancy Ndamase St · Chloorkop · 078 832 6806</span></footer>
+
+<button class="fab" id="fab" type="button" aria-label="Chat to book a wash" aria-expanded="false" aria-controls="chat" data-cursor="Chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></button>
+<button class="nudge" id="nudge" type="button">Need a wash? <b>Book in chat</b></button>
+<section class="chat" id="chat" role="dialog" aria-label="Bubbles, booking assistant" aria-hidden="true" inert>
+  <header><span class="av" aria-hidden="true"></span><div class="who"><b>Bubbles</b><small>Booking assistant · online</small></div><button class="x" id="chatClose" type="button" aria-label="Close chat">×</button></header>
+  <div class="log" id="chatLog" aria-live="polite"></div>
+  <form class="composer" id="chatForm" autocomplete="off">
+    <input id="chatInput" type="text" placeholder="Type a message…" aria-label="Message Bubbles" enterkeyhint="send">
+    <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
